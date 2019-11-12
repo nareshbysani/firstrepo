@@ -4,7 +4,7 @@ pipeline {
         stage('Example Build') {
             steps {
                 script {
-                 if (!env.gitlabActionType){
+                 if (!env.githubActionType){
       echo "Build triggered by the scan process, Ignore it!"
       currentBuild.result = 'NOT_BUILT'
       error('Aborting build triggered by scan process')
